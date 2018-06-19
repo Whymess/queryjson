@@ -34,7 +34,7 @@ var instructionMap = {
 	   },
    	find_companies_between_size: (needle) => {	
   	  data.find( (o) => {
-		  	 if(o.full_time_employees  === needle.toString()){
+		  	 if(o.full_time_employees  === needle.toString() && o.full_time_employees.length !== 0){
 		  	 	    instructionMap.count++
 		  	 		console.log(o)
 		  	 }
@@ -43,7 +43,7 @@ var instructionMap = {
      },
      find_type: (needle) => {
   	  data.find( (o) => {
-		  	 if(o.company_category  === needle){
+		  	 if(o.company_category  === needle && o.company_category.length !== 0){
 		  	 	 instructionMap.count++
 		  	 		console.log(o)
 		  	 }
