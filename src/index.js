@@ -16,7 +16,7 @@ var instructionMap = {
 	 },
 	find_before: (needle) => {
 		  data.find( (o) => {
-		  	 if(o.year_founded < parseInt(needle)){
+		  	 if(o.year_founded < parseInt(needle) && o.year_founded.length !== 0){
 		  	 	 instructionMap.count++
 		  	 	console.log(o)
 		  	 }
@@ -25,8 +25,8 @@ var instructionMap = {
 	},
 	find_after: (needle) => {
 	  	  data.find( (o) => {
-			  	 if(o.year_founded > needle){
-			  	 	 instructionMap.count++
+			  	 if(o.year_founded > needle && o.year_founded.length !== 0){
+			  	 	instructionMap.count++
 		  	 		console.log(o)
 			  	 }
 			})
@@ -35,8 +35,7 @@ var instructionMap = {
    	find_companies_between_size: (needle) => {	
   	  data.find( (o) => {
 		  	 if(o.full_time_employees  === needle.toString()){
-		  	 	 	
-		  	 	 		 instructionMap.count++
+		  	 	    instructionMap.count++
 		  	 		console.log(o)
 		  	 }
 		})
